@@ -13,7 +13,7 @@
  - libhijacker
  - Illusions cheats/patches
  - FTP server on port 1337
- - Klog server on port 9088
+ - Klog server on port 9081
  - elf loader on port 9027
 
 ## Upcoming features
