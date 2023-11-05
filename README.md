@@ -6,7 +6,7 @@
 - https://pkg-zone.com/exploit/PS5/index.html
 
 ## Features
- - kstuff for fself and fpkg support (4.50 & 4.03 only)
+ - kstuff for fself and fpkg support (4.5x & 4.03 only)
  - Debug Settings
  - Jailbreak IPC call (jailbreaks Homebrew apps)
  - Update blocker (unmounts update partition)
@@ -32,6 +32,7 @@
 - [ChendoChap](https://github.com/ChendoChap)
 - [astrelsky](https://github.com/astrelsky)
 - [illusion](https://github.com/illusion0001)
+- [mkbuhd](https://twitter.com/EngMahmoudEng33)
 
 ## Testers
 - [Echo Stretch](https://twitter.com/StretchEcho)
