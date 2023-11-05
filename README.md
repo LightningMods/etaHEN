@@ -32,12 +32,12 @@
 - [ChendoChap](https://github.com/ChendoChap)
 - [astrelsky](https://github.com/astrelsky)
 - [illusion](https://github.com/illusion0001)
-- [mkbuhd](https://twitter.com/EngMahmoudEng33)
 
 ## Testers
 - [Echo Stretch](https://twitter.com/StretchEcho)
 - [idlesauce](https://github.com/idlesauce)
 - [Dizz](https://github.com/DizzRL)
+- [mkbuhd](https://twitter.com/EngMahmoudEng33)
 
 ## Support the project
 - https://ko-fi.com/lightningmods
