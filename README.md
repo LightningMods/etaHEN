@@ -6,7 +6,7 @@
 - https://pkg-zone.com/exploit/PS5/index.html
 
 ## Features
- - kstuff for fself and fpkg support (4.5x & 4.03 only)
+ - kstuff for fself and fpkg support (4.5x and 4.03 only)
  - Debug Settings
  - Jailbreak IPC call (jailbreaks Homebrew apps)
  - Update blocker (unmounts update partition)
@@ -24,9 +24,6 @@
  - (maybe) Jailbreak whitelist for Homebrew
  - plugin loader
 
-## Known issues
-- etaHEN with cheats crashes if a homebrew app requests to be jailbroken
-
 ## Contributors
 - [sleirsgoevy](https://github.com/sleirsgoevy)
 - [ChendoChap](https://github.com/ChendoChap)
@@ -37,7 +34,6 @@
 - [Echo Stretch](https://twitter.com/StretchEcho)
 - [idlesauce](https://github.com/idlesauce)
 - [Dizz](https://github.com/DizzRL)
-- [mkbuhd](https://twitter.com/EngMahmoudEng33)
 
 ## Support the project
 - https://ko-fi.com/lightningmods
