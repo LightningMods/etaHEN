@@ -7,7 +7,7 @@
 
 ## Features
  - Custom System Software version (custom System info)
- - kstuff for fself and fpkg support (4.5x and 4.03 only)
+ - kstuff for fself and fpkg support 
  - Debug Settings
  - HEN config file for settings
  - Jailbreak IPC call (jailbreaks Homebrew apps)
@@ -16,7 +16,7 @@
  - *Optional* Illusions cheats/patches
  - *Optional* FTP server on port 1337
  - Klog server on port 9081
- - elf loader on port 9027
+ - libhijacker daemon elf loader on port 9027 (not for payloads yet)
  - *Optional* PS5Debug
  - *started* Itemzflow intergration
 
@@ -36,6 +36,7 @@ and is automatically created when you run etaHEN for the first time
 | `libhijacker_cheats` | 0 = disables Illusions cheats  1 = enables Illusions cheats |  0 (disabled)     |                                         
 | `PS5Debug`           | 0 = disables PS5Debug auto load 1 = enable PS5Debug auto load | 1 (enabled)     |
 | `FTP`                | 0 = disables etaHEN built-in FTP 1 = enables it                | 1 (enabled)    |
+| `launch_itemzflow`   | 0 = disables auto launching IF 1 = enables it                | 0 (disable)    |
 
 
 ## Contributors
