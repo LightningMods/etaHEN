@@ -1,6 +1,6 @@
 # etaHEN - AIO Homebrew enabler
 
-![etaHEN](https://github.com/LightningMods/etaHEN-dev/blob/main/ETAHEN.png)
+![etaHEN](https://github.com/LightningMods/etaHEN/blob/main/ETAHEN.png)
 
 ## Official PS5 exploit website (auto loads etaHEN)
 - https://pkg-zone.com/exploit/PS5/index.html
