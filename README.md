@@ -44,13 +44,20 @@ and is automatically created when you run etaHEN for the first time
 - [ChendoChap](https://github.com/ChendoChap)
 - [astrelsky](https://github.com/astrelsky)
 - [illusion](https://github.com/illusion0001)
+- CTN & [SiSTR0](https://github.com/SiSTR0) for PS5Debug
 - [SiSTR0](https://github.com/SiSTR0) for PS5Debug
-- [Nomadic](https://github.com/jeroendev-one) for Dumper assistance 
+- [Nomadic](https://github.com/jeroendev-one) (Discord RPC feature)
 
 ## Testers
 - [Echo Stretch](https://twitter.com/StretchEcho)
 - [idlesauce](https://github.com/idlesauce)
 - [Dizz](https://github.com/DizzRL)
+- [BedroZen](https://twitter.com/BedroZen)
+- [MODDED WARFARE](https://twitter.com/MODDED_WARFARE)
 
 ## Support the project
 - https://ko-fi.com/lightningmods
+
+
+## Join us on Discord
+- https://discord.gg/xs2F46tKzK
