@@ -8,13 +8,16 @@
 ## Features
  - Custom System Software version (custom System info)
  - kstuff for fself and fpkg support 
+ - etaHEN log in /data/etaHEN
  - Debug Settings
+ - Game Dumper (Intrgrated with Itemzflow)
  - HEN config file for settings
  - Jailbreak IPC call (jailbreaks Homebrew apps)
  - Update blocker (unmounts update partition)
  - libhijacker
  - *Optional* Illusions cheats/patches
  - *Optional* FTP server on port 1337
+ - *Optional* /data allowed inside apps sandboxes
  - Klog server on port 9081
  - elf loader on port 9027
  - *Optional* PS5Debug
@@ -38,6 +41,8 @@ and is automatically created when you run etaHEN for the first time
 | `PS5Debug`           | 0 = disables PS5Debug auto load 1 = enable PS5Debug auto load  | 1 (enabled)    |
 | `FTP`                | 0 = disables etaHEN built-in FTP 1 = enables it                | 1 (enabled)    |
 | `discord_rpc`	       | 0 = disables Discord RPC server 1 = enables it 	        | 0 (disabled)   | 
+| `testkit`	       | 0 = not testkit 1 = Real Testkits ONLY 	        | 0 (disabled)   | 
+| `Allow_data_in_sandbox` | 0 = disables /data in an apps sandbox 1 = enables it 	        | 1 (enabled)   |
 
 ## Contributors
 - [sleirsgoevy](https://github.com/sleirsgoevy)
