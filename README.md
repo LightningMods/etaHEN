@@ -9,6 +9,7 @@
  - Custom System Software version (custom System info)
  - kstuff for fself and fpkg support 
  - etaHEN log in /data/etaHEN
+ - (optional) System-wide controller shortcut to open itemzflow
  - Debug Settings
  - Game Dumper (Intrgrated with Itemzflow)
  - HEN config file for settings
