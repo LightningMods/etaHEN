@@ -24,6 +24,7 @@
  - *Optional* PS5Debug
  - *started* Itemzflow intergration
  - *Optional* Discord RPC server on port 8000, click [here](https://github.com/jeroendev-one/ps5-rpc-client) for setup instructions 
+ - *Optional* Direct PKG installer service on port 9090
 
 ## Upcoming features
  - More userland patches
@@ -44,6 +45,23 @@ and is automatically created when you run etaHEN for the first time
 | `discord_rpc`	       | 0 = disables Discord RPC server 1 = enables it 	        | 0 (disabled)   | 
 | `testkit`	       | 0 = not testkit 1 = Real Testkits ONLY 	        | 0 (disabled)   | 
 | `Allow_data_in_sandbox` | 0 = disables /data in an apps sandbox 1 = enables it 	        | 1 (enabled)   |
+| `DPI`	       | 0 = disables The Direct PKG Installer service 1 = enables it 	        | 1 (enabled)   | 
+
+## DPI API details for tool creators 
+
+etaHEN's Direct PKG Installer currently is very simple and is considered a WIP
+the service flow is as follows
+
+1. Connect to etaHEN's TCP server via port 9090 (using the PS5s IP)
+2. Send a URL to etaHEN in the following json format
+```
+{ "url" : "http://xxxx" }
+```
+3. etaHEN will then send back the return value (0 on success)
+```
+{ "res" : "0" }
+```
+4. etaHEN will close the client socket after the return json is sent
 
 ## Contributors
 - [sleirsgoevy](https://github.com/sleirsgoevy)
