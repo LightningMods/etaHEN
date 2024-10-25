@@ -94,7 +94,6 @@ the service flow is as follows
 - [astrelsky](https://github.com/astrelsky)
 - [illusion](https://github.com/illusion0001)
 - CTN & [SiSTR0](https://github.com/SiSTR0) for PS5Debug
-- [SiSTR0](https://github.com/SiSTR0) for PS5Debug
 - [Nomadic](https://github.com/jeroendev-one) (Discord RPC feature)
 
 ## Testers
