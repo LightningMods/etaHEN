@@ -1,6 +1,6 @@
 # etaHEN - AIO Homebrew enabler
 
-![etaHEN](https://github.com/LightningMods/etaHEN/blob/main/ETAHEN.png)
+![etaHEN](https://github.com/LightningMods/etaHEN/blob/main/etaHEN-Icon.jpg)
 
 ## 🚀 **Support the Project**
 
