@@ -15,9 +15,14 @@ If you find this project useful and would like to support its continued developm
  - Custom etaHEN [Plugins](https://github.com/LightningMods/etaHEN-SDK/tree/main/Plugin_samples)
  - [Toolbox] Install the Homebrew Store on the console
  - [Toolbox] ★Rest Mode Options
+ - [Toolbox] Remote Play Menu
+ - [Toolbox] Plugin Menu and Plugin auto start menu
+ - [Toolbox] External HDD Menu
+ - [Toolbox] TestKit Menu  
  - [Toolbox] Blu-Ray license activation 
  - [Toolbox] etaHEN credits and supporters
  - [Toolbox] Auto open menu after etaHEN loads
+ - React bundle (all FWs) & Self (only on 2.xx) FTP decryption Support
  - 2 seperate daemons for improved stability and reliability
  - the Util daemon willl be auto restarted by the main etaHEN daemon
  - Custom System Software version (custom System info)
@@ -33,9 +38,9 @@ If you find this project useful and would like to support its continued developm
  - *Optional* FTP server on port 1337
  - *Optional* /data allowed inside apps sandboxes
  - Klog server on port 9081
- - elf loader on port 9027
+ - elf loader on port 9021 (use Johns elfldr)
  - *Optional* PS5Debug
- - *started* Itemzflow intergration
+ - Itemzflow intergration
  - *Optional* Discord RPC server on port 8000, click [here](https://github.com/jeroendev-one/ps5-rpc-client) for setup instructions 
  - *Optional* Direct PKG installer service on port 9090
 
@@ -44,12 +49,11 @@ make your own custom plugins or payload-like ELFs for the HENV plugin via the [e
 More info [Here](https://github.com/LightningMods/etaHEN-SDK/blob/main/README.md)
 
 ## Upcoming features
- - [Toolbox ONLY] load plugins without the HENV plugin
  - [Toolbox] FPS Counter
+ - [Toolbox] Cheats Menu
  - [Toolbox] change debug settings text
- - [Toolbox] On-Screen temps and other info
+ - [Toolbox] On-Screen temps and other info (for retails)
  - More userland patches
- - (maybe) Jailbreak whitelist for Homebrew
  - Improved PS5 Game support (itemzflow)
  - More (consider donating)
 
@@ -88,7 +92,92 @@ the service flow is as follows
 ```
 4. etaHEN will close the client socket after the return json is sent
 
+
+## Jailbreaking an app (FPKG) using etaHEN (non-whitelist method, Network required)
+
+```
+enum Commands : int8_t {
+  INVALID_CMD = -1,
+  ACTIVE_CMD = 0,
+  LAUNCH_CMD,
+  PROCLIST_CMD,
+  KILL_CMD,
+  KILL_APP_CMD,
+  JAILBREAK_CMD
+};
+
+struct HijackerCommand
+{
+  int magic = 0xDEADBEEF;
+  Commands cmd = INVALID_CMD;
+  int PID = -1;
+  int ret = -1337;
+  char msg1[0x500];
+  char msg2[0x500];
+};
+
+int HJOpenConnectionforBC() {
+
+  SceNetSockaddrIn address;
+  address.sin_len = sizeof(address);
+  address.sin_family = AF_INET;
+  address.sin_port = sceNetHtons(9028); //command serve port
+  memset(address.sin_zero, 0, sizeof(address.sin_zero));
+  sceNetInetPton(AF_INET, "127.0.0.1", &address.sin_addr.s_addr);
+
+  int socket = sceNetSocket("IPC_CMD_SERVER", AF_INET, SOCK_STREAM, 0);
+  if (sceNetConnect(socket, (SceNetSockaddr*)&address, sizeof(address)) < 0) {
+    close(socket), socket = -1;
+  }
+
+  return socket;
+}
+
+bool HJJailbreakforBC(int& sock) {
+
+  // send jailbreak IPC command
+  HijackerCommand cmd;
+  cmd.PID = getpid();
+  cmd.cmd = JAILBREAK_CMD;
+
+  if (send(sock, (void*)&cmd, sizeof(cmd), MSG_NOSIGNAL) == -1) {
+      puts("failed to send command");
+      return false;
+  }
+  else {
+    // get ret val from daemon
+    recv(sock, reinterpret_cast<void*>(&cmd), sizeof(cmd), MSG_NOSIGNAL);
+    close(sock), sock = -1;
+    if (cmd.ret != 0 && cmd.ret != -1337) {
+      puts("Jailbreak has failed");
+      return false;
+    }
+    return true;
+  }
+
+  return false;
+}
+
+int main()
+{
+
+     int ret = HJOpenConnectionforBC();
+     if (ret < 0) {
+         puts("Failed to connect to daemon");
+         return -1;
+     }
+     if (!HJJailbreakforBC(ret))
+     {
+          puts("Jailbreak failed");
+          return -1;
+     }
+
+     return 0;
+}
+```
+
 ## Contributors
+- [Buzzer](https://github.com/buzzer-re)
 - [sleirsgoevy](https://github.com/sleirsgoevy)
 - [ChendoChap](https://github.com/ChendoChap)
 - [astrelsky](https://github.com/astrelsky)
