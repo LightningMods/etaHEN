@@ -12,7 +12,7 @@ If you find this project useful and would like to support its continued developm
 
 ## Recommended self-host exploits
 - [Modified IPV6 exploit for etaHEN support](https://github.com/LightningMods/PS5-IPV6-Kernel-Exploit)
-- [Idlesauce UMTX](https://github.com/idlesauce/PS5-UMTX-Jailbreak/tree/fix-thread-exit-upstream)
+- [Idlesauce UMTX](https://github.com/idlesauce/PS5-UMTX-Jailbreak/)
 
 ## Features
  - ★ etaHEN toolbox (debug settings replacement)
